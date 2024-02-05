@@ -6,7 +6,7 @@ WORKDIR /app
 
 #https://github.com/KitwareMedical/dicom-anonymizer
 
-RUN pip3 install dicom-anonymizer
+RUN pip3 install dicom-anonymizer==1.0.11
 
 #Per default, model parameters will be downloaded to ~/hd-bet_params. 
 #If you wish to use a different folder, 

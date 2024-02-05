@@ -6,8 +6,9 @@ RUN apt-get update && apt-get install -y git
 
 WORKDIR /root
 # Clone the repository
-RUN git clone https://github.com/MIC-DKFZ/HD-BET
+RUN git clone https://github.com/MIC-DKFZ/HD-BET 
 
+RUN cd HD-BET && git reset --hard ae160681324d524db3578e4135bf781f8206e146 && cd ..
 RUN pip3 install -r ./HD-BET/requirements.txt
 
 #Per default, model parameters will be downloaded to ~/hd-bet_params. 
