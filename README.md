@@ -15,9 +15,9 @@ flowchart LR
     click node3 "https://github.com/MIC-DKFZ/HD-BET"
 ```
 ## Techniques
-- [KitwareMedical](http://kitware.eu/): [DicomAnonymizer](https://github.com/KitwareMedical/dicom-anonymizer)
-- [NITRC](https://www.nitrc.org/): [DICOM to NIfTI converter](https://github.com/rordenlab/dcm2niix)
-- [MIC-DKFZ](https://www.dkfz.de/en/mic/index.php): [HD-BET](https://github.com/MIC-DKFZ/HD-BET)
+- [KitwareMedical](http://kitware.eu/) - [DicomAnonymizer](https://github.com/KitwareMedical/dicom-anonymizer)
+- [NITRC](https://www.nitrc.org/) - [DICOM to NIfTI converter](https://github.com/rordenlab/dcm2niix)
+- [MIC-DKFZ](https://www.dkfz.de/en/mic/index.php) - [HD-BET](https://github.com/MIC-DKFZ/HD-BET)
 
 
 
