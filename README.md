@@ -62,3 +62,5 @@ patient_id
 |  |- ...
 ```
 
+## Support
+If you would like to see a new functionality, have a suggestion on how to make the documentation clearer or report a problem, you can open an [Issue](https://github.com/schnadoslin/brain-anonymizer-pipeline/issues) here on Github.
