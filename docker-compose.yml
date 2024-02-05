@@ -1,0 +1,34 @@
+version: '3'
+services:
+  dicom-metadata-pruner:
+    container_name: dicom-metadata-pruner
+    build: ./dicom-metadata-pruner/
+    volumes:
+      - ./dicom-metadata-pruner:/app
+      - ./input:/input
+      - ./output:/output
+
+  dicom-to-nifti:
+    container_name: dicom-to-nifti
+    build: ./dicom-to-nifti/
+    volumes:
+      - ./dicom-to-nifti:/app
+      - ./input:/input
+      - ./output:/output    
+    depends_on:
+      dicom-metadata-pruner:
+        condition: service_completed_successfully
+
+  defacer:
+    container_name: defacer
+    build: ./hdbet/
+    volumes:
+      - ./hdbet:/app
+      - ./input:/input
+      - ./output:/output
+    environment:
+      - gpu=false
+    depends_on:
+      dicom-to-nifti:
+        condition: service_completed_successfully
+
