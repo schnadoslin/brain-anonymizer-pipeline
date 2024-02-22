@@ -41,7 +41,7 @@ If you want to use GPU acceleration:
 
 3. The anonymised brain extracted mri images are found in the `output` directory.
 
-
+4. You can save the logs e.g. `docker logs nifti-brain-extractor -t >& ./hdbet_cpu.log`
 ## Directory Structure (I/O)
 
 Be sure that each examination from a patient is exported in its respective folder **and possibly indicating the exam's modality / weighting**. For example, if an patient has a T1, a Flair and a T2 examinations the folder structure should be:
