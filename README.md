@@ -62,5 +62,20 @@ patient_id
 |  |- ...
 ```
 
+## Example Costs
+CPU: Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+GPU: Quadro RTX 6000 24GB VRAM 
+If you use GPU acceleration, you can set the number of `jobs` in the `docker-compose_gpu.yml` file.
+For this example we used in 3 jobs for hdbet.
+
+Exampledata: 31 DICOM folders with a total size of 560MB and each folder size averaging of 18.5MB $\pm$ 8MB with an average of 210 $\pm$ 70 .dcm files per folder.
+|Method|Duration
+|---|---|
+| DICOM Metadata Anonymisation | < 1 min |
+| DICOM to NIfTI Conversion | < 1 min |
+| Brain Extraction with CPU | ~ 100 min |
+| Brain Extraction with GPU | ~ 30 min |
+
 ## Support
 If you would like to see a new functionality, have a suggestion on how to make the documentation clearer or report a problem, you can open an [Issue](https://github.com/schnadoslin/brain-anonymizer-pipeline/issues) here on Github.
