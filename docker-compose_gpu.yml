@@ -19,8 +19,8 @@ services:
       dicom-metadata-pruner:
         condition: service_completed_successfully
 
-  defacer:
-    container_name: defacer
+  nifti-brain-extractor:
+    container_name: nifti-brain-extractor_gpu
     build: ./hdbet/
     volumes:
       - ./hdbet:/app
@@ -28,6 +28,7 @@ services:
       - ./output:/output
     environment:
       - gpu=true
+      - jobs=3 # number of threads to use: 3GB VRAM per thread
     runtime: nvidia
     shm_size: '2gb'
     deploy:

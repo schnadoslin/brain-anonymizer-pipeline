@@ -2,7 +2,7 @@
 FROM ubuntu:24.04
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y curl unzip
+RUN apt-get install -y curl unzip parallel
 
 RUN curl -fLO https://github.com/rordenlab/dcm2niix/releases/download/v1.0.20230411/dcm2niix_lnx.zip
  #--output dcm2niix.zip

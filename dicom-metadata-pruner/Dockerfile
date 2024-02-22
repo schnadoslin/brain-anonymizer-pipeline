@@ -1,6 +1,9 @@
 # Use an official Python runtime as the base image
 FROM python:3.9
 
+RUN apt-get update && apt-get install -y parallel
+
+
 # Set the working directory in the container
 WORKDIR /app
 
@@ -15,5 +18,6 @@ RUN pip3 install dicom-anonymizer==1.0.11
 
 # Set the command to run the application
 CMD [ "bash", "/app/dicom-metadata-pruner.sh" ]
+
 
 

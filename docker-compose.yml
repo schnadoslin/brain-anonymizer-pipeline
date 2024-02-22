@@ -19,8 +19,8 @@ services:
       dicom-metadata-pruner:
         condition: service_completed_successfully
 
-  defacer:
-    container_name: defacer
+  nifti-brain-extractor:
+    container_name: nifti-brain-extractor
     build: ./hdbet/
     volumes:
       - ./hdbet:/app
