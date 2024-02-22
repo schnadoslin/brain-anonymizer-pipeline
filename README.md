@@ -36,7 +36,7 @@ If you want to use GPU acceleration:
 1. Copy your MRI data to the `input` directory. Be sure to use the right [directory structure](#directory-structure-io).
 
 2. Run the pipeline.
-    - GPU based: `docker compose up`
+    - `docker compose up`
     - with GPU acceleration: `docker compose -f docker-compose_gpu.yml up`
 
 3. The anonymised brain extracted mri images are found in the `output` directory.
